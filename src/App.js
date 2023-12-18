@@ -1,10 +1,10 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import NavbarHeader from "./components/NavbarHeader";
 import CreateUser from "./components/CreateUser";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DataList from "./components/DataList";
 import UpdateUser from "./components/UpdateUser";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

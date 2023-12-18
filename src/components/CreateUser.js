@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { createUser } from "../redux/feature/userDetailsSlice";
 import { useNavigate } from "react-router-dom";
 import style from "./Custom.module.css";
 
 const CreateUser = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({
     name: "",

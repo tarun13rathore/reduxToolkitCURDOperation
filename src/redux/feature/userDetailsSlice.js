@@ -5,7 +5,7 @@ export const createUser = createAsyncThunk(
   "createUser",
   async (data, { rejectWithValue }) => {
     const response = await fetch(
-      "https://64f1d0610e1e60602d244fde.mockapi.io/curd",
+      "https://657fc2666ae0629a3f53998c.mockapi.io/api/curd",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -27,7 +27,7 @@ export const showList = createAsyncThunk(
   "userList",
   async (args, { rejectWithValue }) => {
     const response = await fetch(
-      "https://64f1d0610e1e60602d244fde.mockapi.io/curd"
+      "https://657fc2666ae0629a3f53998c.mockapi.io/api/curd"
     );
 
     try {
@@ -45,7 +45,7 @@ export const deleteUser = createAsyncThunk(
   "deleteUser",
   async (id, { rejectWithValue }) => {
     const response = await fetch(
-      `https://64f1d0610e1e60602d244fde.mockapi.io/curd/${id}`,
+      `https://657fc2666ae0629a3f53998c.mockapi.io/api/curd/${id}`,
       {
         method: "DELETE",
       }
@@ -66,7 +66,7 @@ export const updateUser = createAsyncThunk(
   "updateUser",
   async (data, { rejectWithValue }) => {
     const response = await fetch(
-      `https://64f1d0610e1e60602d244fde.mockapi.io/curd/${data.id}`,
+      `https://657fc2666ae0629a3f53998c.mockapi.io/api/curd/${data.id}`,
       {
         method: "PUT",
         headers: { "content-type": "application/json" },
@@ -157,8 +157,8 @@ export const userDetailsSlice = createSlice({
   },
 });
 
-// this is for configureStore
-export default userDetailsSlice.reducer;
-
 // this is for dispatch
 export const { searchUser } = userDetailsSlice.actions;
+
+// this is for configureStore
+export default userDetailsSlice.reducer;

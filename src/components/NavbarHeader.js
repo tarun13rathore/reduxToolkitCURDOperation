@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { searchUser } from "../redux/feature/userDetailsSlice";
+import { Navbar, Nav, Form, Container } from "react-bootstrap";
 
 const NavbarHeader = () => {
   const count = useSelector((state) => state.AllUser);
@@ -32,7 +28,6 @@ const NavbarHeader = () => {
               <Nav.Link>
                 <Link to={"/"}>Data List ({count?.users?.length})</Link>
               </Nav.Link>
-
               <Nav.Link>
                 <Link to={`CreateUser`}>Create User</Link>
               </Nav.Link>
@@ -46,7 +41,6 @@ const NavbarHeader = () => {
                 value={searchData}
                 onChange={(e) => setSearchData(e.target.value)}
               />
-              {/* <Button variant="outline-success">Search</Button> */}
             </Form>
           </Navbar.Collapse>
         </Container>

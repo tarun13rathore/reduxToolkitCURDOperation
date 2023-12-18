@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
+import { Card, ListGroup, Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { showList, deleteUser } from "../redux/feature/userDetailsSlice";
 import CustomModal from "./CustomModal";
 import { Link } from "react-router-dom";
-import Form from "react-bootstrap/Form";
 
 const DataList = () => {
   const [id, setId] = useState();

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../redux/feature/userDetailsSlice";
 import { useNavigate, useParams } from "react-router-dom";
+import style from "./Custom.module.css";
+import { Form, Button } from "react-bootstrap";
 
 const UpdateUser = () => {
   const dispatch = useDispatch();

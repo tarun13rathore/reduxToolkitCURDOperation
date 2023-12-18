@@ -1,8 +1,7 @@
 import React from "react";
-import style from "./Custom.module.css";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
 import { useSelector } from "react-redux";
+import style from "./Custom.module.css";
+import { Card, ListGroup } from "react-bootstrap";
 
 const CustomModal = ({ id, setShow, show }) => {
   const allUser = useSelector((state) => state.AllUser.users);
